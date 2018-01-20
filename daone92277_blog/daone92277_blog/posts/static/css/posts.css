@@ -1,0 +1,9 @@
+.header{
+    margin-left: 260px;
+}
+
+.header img {
+    margin-left: 35px;
+    height: 400px;
+    border: 2px solid black
+}

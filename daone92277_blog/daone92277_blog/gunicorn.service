@@ -1,0 +1,12 @@
+
+[Unit] 
+Description=gunicorn daemon 
+After=network.target
+ 
+[Service] User=daone92277 
+Group=www-data 
+WorkingDirectory=/home/daone92277/daone92277_blog 
+ExecStart=/home/daone92277/daone92277_blog/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/daone92277/daone92277_blog/daone92277_blog.sock daone92277_blog.wsgi:application 
+
+[Install] 
+WantedBy=multi-user.target
